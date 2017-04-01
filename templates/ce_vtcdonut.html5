@@ -1,0 +1,49 @@
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+    <?php if ($this->headline): ?>
+        <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div id="app<?= $this->appid ?>">
+        <div class="chart">
+            <vtc-donut
+                :data="chartdata"
+                :width="chartwidth"
+                :height="chartheight"
+                :chartrotation="chartrotation"
+                @showinfo="showinfo"
+            ></vtc-donut>
+        </div>
+    </div>
+
+    <script>
+        var data_from_contao = <?= $this->data; ?>;
+        new Vue({
+            el: '#app<?= $this->appid ?>',
+            data: function () {
+                return {
+                    selected: 0,
+                    chartdata: data_from_contao.chart_data,
+                    chartwidth: <?= $this->svgwidth ?>,
+                    chartheight: <?= $this->svgheight ?>,
+                    //chartrotation: 0, // keine Rotation, Start des ersten
+                    // Segments eines Donuts bei 12 Uhr.
+                    //
+                    // Wir wollen *bei zwei Segmenten* aber eine Ausrichtung
+                    // "rechts/links", gehen also um 90 Grad und die Hälfte
+                    // der Größe des ersten Segments (in Grad!) gegen den
+                    // Uhrzeigersinn zurück (negative Winkel).
+                    chartrotation: -90 - ( (data_from_contao.chart_data[0].value / 100) * 360 / 2),
+                    // evtl noch -180 um die "Orientierung" genau spiegelverkehrt
+                    // zu gestalten.
+                }
+            },
+            methods: {
+                showinfo: function (position) {
+                    this.selected = position;
+                }
+            }
+        });
+  </script>
+
+</div>

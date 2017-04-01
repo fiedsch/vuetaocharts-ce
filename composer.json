@@ -1,0 +1,32 @@
+{
+  "name": "fiedsch/vuetaocharts",
+  "type": "library",
+  "description": "Charts withe Vue.js as Contao content elements",
+  "keywords": [
+    "charts",
+    "data"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Fieger",
+      "email": "fiedsch@ja-eh.at"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/fiedsch/vuetaocharts-ce/issues",
+    "source": "https://github.com/fiedsch/vuetaocharts-ce"
+  },
+  "require": {
+    "php": ">=5.6",
+    "pimple/pimple": "~3.0",
+    "fiedsch/contao-components": "~0.6"
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/vuetaocharts"
+      }
+    }
+  }
+}
