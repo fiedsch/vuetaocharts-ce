@@ -1,6 +1,6 @@
 {
   "name": "fiedsch/vuetaocharts-ce",
-  "type": "library",
+  "type": "contao-module",
   "description": "Charts withe Vue.js as Contao content elements",
   "keywords": [
     "charts",
