@@ -6,7 +6,7 @@ The extension consists of two parts
 
 * Code for dynamic SVG-charts with Vue.js (see https://github.com/fiedsch/vuetaocharts for the Vue.js components.
   Also make sure to visit https://vuejs.org and read the guide).
-* a Contao content element that let's you embed the chart and provide the chart's data.
+* A Contao content element that let's you embed the chart and provide the chart's data.
 
 ## Usage
 
@@ -42,7 +42,7 @@ An example für the donut chart:
 ```json
 {
     "headline": "The Headline for the Chart",
-    "chart_data": [ ... ]  # as above
+    "chart_data": [ /* as above */ ]
 }
 ```
 
