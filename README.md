@@ -106,7 +106,7 @@ To solve the issue, use
 ```html
  <div>[{] foo [}]</div>
 ```
-where `[{]` and `[}]` will be replaced be  `{{` and `}}` respecitively by Contao</div>, or 
+where `[{]` and `[}]` will be replaced be  `{{` and `}}` respecitively by Contao, or 
 ```html
 <div v-text="foo"></div>
 ```
