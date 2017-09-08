@@ -7,7 +7,7 @@
  * @license MIT
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['vuetaochart'] = '{type_legend},type,headline;{chart_legend:hide},svgwidth,svgheight,template;{data_legend},json_data;{protected_legend:hide},protected;{expert_legend:hide}guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['vuetaochart'] = '{type_legend},type,headline;{chart_legend:hide},svgwidth,svgheight,template;{data_legend},json_data;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['svgwidth'] = [
     'label'     => &$GLOBALS['TL_LANG']['tl_content']['svgwidth'],
